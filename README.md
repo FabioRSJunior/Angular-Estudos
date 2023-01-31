@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Caderno de laboratório de Angular, desenvolvido seguindo os seguintes materiais:  
 
-[](https://www.youtube.com/watch?v=vJt_K1bFUeA&list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw)
+[Curso Angular Matheus Battisti - Hora de Codar](https://www.youtube.com/watch?v=vJt_K1bFUeA&list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw)
 
 Complemento dos estudos:
 
