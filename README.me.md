@@ -1,40 +1,64 @@
 # Angular
 
-[Para casa componentes](https://www.notion.so/Para-casa-componentes-657ca78e438d42e2a58c89f1168062f6)
+# CursoAngular
 
-[Loiane](https://www.notion.so/Loiane-5ea16e30efc5457e8e142d3ed8a27eed)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
-[Rotas](https://www.notion.so/Rotas-506a955e1c324d09928f85f49e8b940d)
+Caderno de laboratório de Angular, desenvolvido seguindo os seguintes materiais:  
 
-Npm install
+[](https://www.youtube.com/watch?v=vJt_K1bFUeA&list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw)
 
-instale o Node 
+Complemento dos estudos:
 
-node -v 
+[Curso Angular #01: Introdução](https://www.youtube.com/watch?v=tPOMG0D57S0&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G)
 
-[](https://web.dio.me/track/formacao-angular-developer)
+## Comandos Uteis:
 
+```bash
+#Instale o Node 
+#https://nodejs.org/en/download/
+
+#Instalando Angular
 sudo su
-
 npm install -g @angular/cli
 
-Criando projeto:
-
+#Criando projeto:
 ng new <nome>
+#selecione a opção css
 
-selecione a opção css 
-
-Testanto aplicação: 
-
-Dentro do VS code, utilize um terminal integrado e execute
-
+#Testanto aplicação: 
+#Dentro do VS code, utilize um terminal integrado e execute:
 ng serve
 
-Parando a aplicação:
+#Parando a aplicação:
+crtl + c
+```
 
-crtl + c  
+# Development server
 
-### Estruturas do Projeto:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io/).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Estruturas do Projeto:
 
 node_modules ⇒ Dependências do projeto   
 
@@ -514,3 +538,75 @@ export class ListRenderComponent implements OnInit {
 ```
 
 ### Pipe Operators (14)
+
+### Rotas:
+
+[Loiane, melhor professora de Angular](https://youtu.be/tHK-k7GxAAE) 
+
+Crie seu componente que vai funcionar como pagina para aquela rota: 
+
+```bash
+ng g c nome-componente
+```
+
+crie em APP um arquivo de nome: app.routing.ts
+
+Os paths precisam de componentes que já foram criados 
+
+```bash
+import { ModuleWithProviders } from "@angular/core";
+
+import { Route, RouterModule, Routes } from "@angular/router";
+
+import { DeskEsqueciSenhaComponent } from "./desk-esqueci-senha/desk-esqueci-senha.component";
+import { DeskLoginComponent } from "./desk-login/desk-login.component";
+import { DeskNovaSenhaComponent } from "./desk-nova-senha/desk-nova-senha.component";
+
+const APP_ROUTES: Routes = [
+    { path: '', component: DeskLoginComponent },
+    { path: 'esquecisenha', component: DeskEsqueciSenhaComponent },
+    { path: 'navasenha', component: DeskNovaSenhaComponent }
+];
+
+export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(APP_ROUTES);
+```
+
+Em app.module.ts Não se esqueça de das imports a constante 
+
+```bash
+import { routing } from './app.routing';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    DeskLoginComponent,
+    DeskPreCadastroComponent,
+    DeskEsqueciSenhaComponent,
+    DeskNovaSenhaComponent
+  ],
+  imports: [
+    BrowserModule,
+    ParacasaLibModule,
+    AppRoutingModule,
+    routing
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Por ultimo, coloque no app.modules.html
+
+Para utilizar o RouterLink basta fazer como no código abaixo
+
+```bash
+<router-outlet></router-outlet>
+<a routerLink="/esquecisenha">Podia ser um link</a>
+```
+
+[Para casa componentes](https://www.notion.so/Para-casa-componentes-657ca78e438d42e2a58c89f1168062f6)
+
+[Rotas](https://www.notion.so/Rotas-506a955e1c324d09928f85f49e8b940d)
+
+[Loiane](https://www.notion.so/Loiane-5ea16e30efc5457e8e142d3ed8a27eed)
