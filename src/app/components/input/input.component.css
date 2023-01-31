@@ -1,0 +1,22 @@
+input {
+    background: var(--input-default);
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 1.25rem 1rem;
+    border-radius: 50px; 
+    border: 2px;
+  }
+
+  /* input:selected { */
+  .selected {
+    background: var(--light);
+    border: 2px solid var(--primary);
+  }  
+
+    /* input:typed { */
+  .typed {
+    background: var(--light);
+    border: 2px solid var(--dark);
+  }
+
+  

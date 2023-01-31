@@ -1,0 +1,35 @@
+  textarea{
+    background: var(--input-default);
+    /* color: var(--dark-1);                         TROCAR          */
+    color:black;
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: normal;
+    border-radius: 10px; 
+    border: none;
+
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    padding: 6px 16px;
+
+    /* position: relative; */
+    min-width: 354px;
+    height: 152px;
+    left: 20px;
+    top: 30.5px;
+  }
+    
+    /* input:typed { */
+  .typed {
+    /* color: var(--dark);                         TROCAR          */
+    color: black;
+  }
+
+  /* input:typing { */
+    .typing {
+      /* color: var(--dark);                         TROCAR          */
+      color: black;
+      background: var(--light);
+      border: 2px solid var(--primary);
+    }

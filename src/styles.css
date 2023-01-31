@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* body{
+    padding-bottom: 500px;
+}
+
+.class{
+    border-bottom: 1px solid blue;
+    padding: 2em;
+    margin-bottom: 1em;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: #0cb1ee;
+  --primary-p1: #107dac;
+  --primary-p2: #004583;
+
+  --light: #fff;
+  --light-p1: #fff;
+  --light-p2: #588E96;
+
+  --input-default: #EBF2f7;
+
+
+  --dark: #323c45;
+
+  /* transparente: */
+  --transparent: #fefefe;
+  --transparent-p1: #fefefe;
+
+}

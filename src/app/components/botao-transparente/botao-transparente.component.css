@@ -1,0 +1,28 @@
+button {
+    background: var(--transparent);
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1.25rem 6.7rem;
+    border-radius: 50px;
+    /* border: none; */
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    border: 3px solid grey;
+  }
+  
+  button:hover {
+    background: var(--light);
+    border: 0.188px solid var(--dark);
+  }
+  
+  button:disabled {
+    background: var(--transparent-p1);
+    opacity: 0.5;
+  }
+  
+  .bg-vermelho {
+    background: red;
+  }
